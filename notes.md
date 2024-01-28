@@ -1,3 +1,6 @@
+https://github.com/stuartpittaway/diyBMS-CurrentShunt
+https://www.analog.com/en/analog-dialogue/articles/optimize-high-current-sensing-accuracy.html
+
 ## Solar panel spec
 - Datasheet: https://www.bimblesolar.com/docs/Updated_Perlight_PLM-295MB-54_Black-Plus-Series.pdf
 - Open-circuit voltage: 37.18V
@@ -40,3 +43,21 @@ Just an older version of INA228, with smaller voltage range
 - 3A
 - 4.5V to 40V input range
 - Adjustable output
+
+Vout=3.3V
+R1=100k
+R2=22.1k
+
+L = Vout * (1-Vout/Vinmax) / (Fsw * Ioutmax * 0.4)
+
+## LMR51420
+## LMR51430
+
+## Shunt
+
+- 15A current
+- INA228 range: ±163.84 mV / ±40.96 mV
+- 10.92 mOhm or 2.73mOhm
+- Power dissipation: RI^2: 0.61W
+- 2512 Package?
+- eg. https://www.vishay.com/docs/30122/wslp.pdf
