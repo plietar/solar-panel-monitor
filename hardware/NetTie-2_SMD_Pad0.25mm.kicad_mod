@@ -1,0 +1,31 @@
+(footprint "NetTie-2_SMD_Pad0.5mm" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (descr "Net tie, 2 pin, 0.5mm square SMD pads")
+  (tags "net tie")
+  (property "Sheetfile" "input.kicad_sch")
+  (property "Sheetname" "Sense1")
+  (property "exclude_from_bom" "")
+  (property "ki_description" "Net tie, 2 pins")
+  (property "ki_keywords" "net tie short")
+  (attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+  (net_tie_pad_groups "1, 2")
+  (fp_text reference "NT5" (at 0 -1.2) (layer "F.SilkS") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 88fa04af-a7f1-43f6-8ac8-d7b0ed6ebacc)
+  )
+  (fp_text value "NetTie_2" (at 0 1.2) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp e4db6da4-cec6-4705-93b0-d05d57eb869c)
+  )
+  (fp_poly
+    (pts
+      (xy -0.5 -0.127)
+      (xy -0.008 -0.127)
+      (xy -0.008 0.123)
+      (xy -0.5 0.123)
+    )
+
+    (stroke (width 0) (type solid)) (fill solid) (layer "F.Cu") (tstamp 9447d37e-9378-4f22-9d25-c0b1217f2595))
+  (pad "1" smd circle (at -0.5 0) (size 0.25 0.25) (layers "F.Cu") (tstamp 51c709b7-1def-4b3f-9234-97a4aa0f9a71))
+  (pad "2" smd circle (at 0 0) (size 0.25 0.25) (layers "F.Cu") (tstamp 8217c49d-9d11-438b-8fa6-663cbbaa317c))
+)

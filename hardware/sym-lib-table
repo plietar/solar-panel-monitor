@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "INA228")(type "KiCad")(uri "${KIPRJMOD}/INA228.kicad_sym")(options "")(descr ""))
   (lib (name "SY8303")(type "KiCad")(uri "${KIPRJMOD}/SY8303.kicad_sym")(options "")(descr ""))
+  (lib (name "THVD8010")(type "KiCad")(uri "${KIPRJMOD}/THVD8010.kicad_sym")(options "")(descr ""))
+  (lib (name "lmr51606")(type "KiCad")(uri "${KIPRJMOD}/lmr51606.kicad_sym")(options "")(descr ""))
 )
