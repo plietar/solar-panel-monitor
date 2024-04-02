@@ -1,0 +1,3 @@
+[submodule "hardware/kicad-parts"]
+	path = hardware/kicad-parts
+	url = https://github.com/plietar/kicad-parts

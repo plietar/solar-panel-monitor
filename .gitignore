@@ -6,3 +6,4 @@
 *.bak
 build
 sdkconfig.old
+fp-info-cache

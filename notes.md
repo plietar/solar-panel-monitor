@@ -6,6 +6,8 @@ https://www.analog.com/en/analog-dialogue/articles/optimize-high-current-sensing
 - Open-circuit voltage: 37.18V
 - Short-circuit current: 10.08A
 
+- Typical voltage: 36V
+
 ## Power monitor IC
 ### INA260
 - Datasheet: https://www.ti.com/lit/ds/symlink/ina260.pdf
@@ -50,14 +52,31 @@ R2=22.1k
 
 L = Vout * (1-Vout/Vinmax) / (Fsw * Ioutmax * 0.4)
 
-## LMR51420
-## LMR51430
+ SRP7028CC-150M 
+
+## LMR36520
+## LMR51420 / LMR51430
+- 4.5V to 36V input range
+- Adjustable output
+
+    Reverse polrity mosfet
+https://www.mouser.co.uk/datasheet/2/916/PMV37ENE-2909762.pdf
+https://www.mouser.co.uk/datasheet/2/115/DIOD_S_A0005045137_1-2542598.pdf
 
 ## Shunt
 
 - 15A current
-- INA228 range: ±163.84 mV / ±40.96 mV
-- 10.92 mOhm or 2.73mOhm
+- INA228 range: ±40.96 mV (alternatively, ±163.84 mV)
+- R < 2.73mOhm
 - Power dissipation: RI^2: 0.61W
 - 2512 Package?
 - eg. https://www.vishay.com/docs/30122/wslp.pdf
+    https://www.vishay.com/docs/30100/wsl.pdf
+
+# Power line communication
+# THVD8000 / THVD8010
+
+https://e2e.ti.com/support/interface-group/interface/f/interface-forum/1205049/thvd8000-design-review-of-power-over-rs485-circuit
+
+
+THVD8010 is lower-rate, more noise resistant: https://e2e.ti.com/support/interface-group/interface/f/interface-forum/1272091/thvd8010-are-thvd8000-and-thvd8010-interchangeable
