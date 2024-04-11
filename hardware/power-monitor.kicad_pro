@@ -37,16 +37,16 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.3,
-          "height": 2.6,
-          "width": 2.6
+          "drill": 0.0,
+          "height": 3.4,
+          "width": 1.5
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
         "silk_text_size_h": 0.8,
         "silk_text_size_v": 0.8,
         "silk_text_thickness": 0.1,
-        "silk_text_upright": false,
+        "silk_text_upright": true,
         "zones": {
           "min_clearance": 0.2
         }
@@ -179,7 +179,12 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.0,
+        0.25,
+        0.3,
+        0.6,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -211,6 +216,14 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.4,
+          "drill": 0.2
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -469,23 +482,6 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "HV",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.4,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
         "clearance": 0.08,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -509,24 +505,8 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "HV",
-        "pattern": "/*/IN?"
-      },
-      {
-        "netclass": "HV",
-        "pattern": "/VNEG"
-      },
-      {
-        "netclass": "HV",
-        "pattern": "/VPOS"
-      },
-      {
         "netclass": "Supply",
         "pattern": "VCC"
-      },
-      {
-        "netclass": "HV",
-        "pattern": "/Supply/INPUT"
       },
       {
         "netclass": "Supply",
@@ -545,16 +525,12 @@
         "pattern": "/Supply/SW"
       },
       {
-        "netclass": "Default",
-        "pattern": "/ATTiny/UPDI"
+        "netclass": "Supply",
+        "pattern": "/Supply/VIN"
       },
       {
         "netclass": "Supply",
-        "pattern": "/UPDI-VCC"
-      },
-      {
-        "netclass": "Supply",
-        "pattern": "/SERIAL-VCC"
+        "pattern": "/VPOS"
       }
     ]
   },
@@ -686,20 +662,8 @@
       "Root"
     ],
     [
-      "bde9bcd6-a9a9-4523-b748-94b04cb34123",
-      "Sense1"
-    ],
-    [
-      "5e55073d-b0ac-40b6-9e71-0abcea7a889d",
-      "Sense2"
-    ],
-    [
       "9cc7f9ef-4a0f-4146-ab6d-519882eba6e1",
       "Supply"
-    ],
-    [
-      "da633192-2366-4b28-8d7a-0c6b1ae5e8c2",
-      "ESP32"
     ]
   ],
   "text_variables": {}
