@@ -1,0 +1,3 @@
+- Shunt resistor does not exist in 2816, use 2512 instead
+- Button footprint is not quite right
+- Stemma connector pin ordered is reversed

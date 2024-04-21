@@ -5163,7 +5163,7 @@
 				)
 			)
 		)
-		(property "Value" "Screw_Terminal_01x01"
+		(property "Value" "~"
 			(at 184.15 128.27 0)
 			(effects
 				(font
@@ -5362,7 +5362,7 @@
 				)
 			)
 		)
-		(property "Value" "Screw_Terminal_01x01"
+		(property "Value" "~"
 			(at 184.15 133.35 0)
 			(effects
 				(font
@@ -5616,10 +5616,9 @@
 		(at 93.98 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "22fe490a-edd0-4c30-93ad-e2e30133357e")
 		(property "Reference" "J3"
 			(at 93.98 135.89 0)
@@ -5629,12 +5628,13 @@
 				)
 			)
 		)
-		(property "Value" "PROG"
+		(property "Value" "~"
 			(at 93.98 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
@@ -5662,6 +5662,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Label" "PROG"
+			(at 93.98 138.938 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "5"
@@ -6614,7 +6622,7 @@
 		(at 273.05 133.35 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "78246f2b-7a7d-4db5-963f-dd503f806847")
@@ -6682,7 +6690,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "79886f85-d6b1-4fcb-b872-321cb359a680")
 		(property "Reference" "J9"
 			(at 95.25 178.1555 0)
@@ -6693,13 +6700,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "I2C"
+		(property "Value" "~"
 			(at 95.25 180.6955 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal"
@@ -6727,6 +6735,15 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Label" "I2C"
+			(at 95.25 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "4"
@@ -6960,7 +6977,7 @@
 		(at 273.05 138.43 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "7e74c729-0179-409c-8f6c-aa96030086fa")
@@ -7119,7 +7136,7 @@
 		(at 273.05 128.27 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "84a492ad-4cd2-42af-b3cc-ed15639f2aa7")
@@ -7596,7 +7613,7 @@
 				)
 			)
 		)
-		(property "Value" "Ground"
+		(property "Value" "~"
 			(at 184.15 123.19 0)
 			(effects
 				(font
@@ -7624,6 +7641,15 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 184.15 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Label" "Ground"
 			(at 184.15 127 0)
 			(effects
 				(font
@@ -7931,12 +7957,13 @@
 				)
 			)
 		)
-		(property "Value" "Input A"
+		(property "Value" "~"
 			(at 184.15 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TerminalBlock_Wuerth:Wuerth_REDCUBE-THR_WP-THRSH_74651175_THR"
@@ -7964,6 +7991,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Label" "Input A"
+			(at 184.15 104.902 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -8194,13 +8229,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "I2C"
+		(property "Value" "~"
 			(at 132.08 179.4255 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal"
@@ -8228,6 +8264,15 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Label" "I2C"
+			(at 132.334 179.578 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "4"
@@ -8344,7 +8389,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "1uF"
 			(at 36.83 46.9899 0)
 			(effects
 				(font
@@ -8613,12 +8658,13 @@
 				)
 			)
 		)
-		(property "Value" "Input B"
+		(property "Value" "~"
 			(at 184.15 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TerminalBlock_Wuerth:Wuerth_REDCUBE-THR_WP-THRSH_74651175_THR"
@@ -8646,6 +8692,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Label" "Input B"
+			(at 184.15 45.212 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -8747,12 +8801,13 @@
 				)
 			)
 		)
-		(property "Value" "Output"
+		(property "Value" "~"
 			(at 184.15 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "TerminalBlock_Wuerth:Wuerth_REDCUBE-THR_WP-THRSH_74651175_THR"
@@ -8780,6 +8835,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Label" "Output"
+			(at 184.15 74.422 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -8939,7 +9002,7 @@
 		(at 273.05 143.51 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "ee8b633f-457f-4254-a19a-0d52101342ae")

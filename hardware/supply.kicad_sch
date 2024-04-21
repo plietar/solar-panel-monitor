@@ -1269,7 +1269,7 @@
 				)
 			)
 		)
-		(property "Value" "0.1uF / 16V"
+		(property "Value" "0.1uF"
 			(at 168.91 100.33 90)
 			(effects
 				(font
@@ -1297,6 +1297,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 168.91 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "16V"
+			(at 168.91 102.87 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1554,7 +1563,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF / 16V"
+		(property "Value" "10uF"
 			(at 208.28 119.38 0)
 			(effects
 				(font
@@ -1582,6 +1591,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 204.47 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "16V"
 			(at 204.47 118.11 0)
 			(effects
 				(font
@@ -1813,10 +1831,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c51bbcc2-2b3b-4f7c-ba6d-f975c0770334")
 		(property "Reference" "C6"
-			(at 119.38 107.95 0)
+			(at 119.38 107.9499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1825,7 +1842,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 119.38 110.49 0)
+			(at 119.38 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1858,6 +1875,15 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Characteristics" "100V"
+			(at 119.38 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "1"
@@ -2017,7 +2043,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f37bd468-8422-4aa3-ab70-c3173ed6f4f2")
 		(property "Reference" "C5"
 			(at 132.08 107.9499 0)
@@ -2062,6 +2087,15 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Characteristics" "100V"
+			(at 132.08 112.776 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "1"

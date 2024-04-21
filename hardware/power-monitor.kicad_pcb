@@ -381,7 +381,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "1uF"
 			(at 0 1.85 90)
 			(layer "F.Fab")
 			(uuid "aa054859-dabf-457e-a46e-6a5245e81884")
@@ -1388,7 +1388,7 @@
 		(path "/78246f2b-7a7d-4db5-963f-dd503f806847")
 		(sheetname "Root")
 		(sheetfile "power-monitor.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 2.2 0)
@@ -1662,9 +1662,10 @@
 				)
 			)
 		)
-		(property "Value" "I2C"
+		(property "Value" "~"
 			(at 0 -4.25 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "6d8d3017-51c4-4969-b09b-b8a7d2ff0139")
 			(effects
 				(font
@@ -1706,6 +1707,18 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Label" "I2C"
+			(at 0 -4.25 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "fde33ca4-8e2a-49b8-ac39-a0ec0a3bbffc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2780,7 +2793,7 @@
 		(path "/ee8b633f-457f-4254-a19a-0d52101342ae")
 		(sheetname "Root")
 		(sheetfile "power-monitor.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 2.2 0)
@@ -3054,7 +3067,7 @@
 				)
 			)
 		)
-		(property "Value" "Screw_Terminal_01x01"
+		(property "Value" "~"
 			(at 0 6 0)
 			(layer "F.Fab")
 			(uuid "f480b066-1437-42c2-a473-9e6249fd5e1c")
@@ -3868,7 +3881,7 @@
 		(descr "REDCUBE THR with internal through-hole thread WP-THRSH (https://www.we-online.de/katalog/datasheet/74651175.pdf)")
 		(tags "screw terminal thread redcube thr power connector")
 		(property "Reference" "J1"
-			(at 0 -6 270)
+			(at 0 -6 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "d61191b1-4c9c-42f2-84dc-63b2fce06a64")
@@ -3879,10 +3892,11 @@
 				)
 			)
 		)
-		(property "Value" "Input A"
+		(property "Value" "~"
 			(at 0 6 -90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "b2430e5c-1b52-4c69-88c0-4be4f49c32fb")
 			(effects
 				(font
@@ -3924,6 +3938,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Label" "Input A"
+			(at 0 6 -90)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "66af0dea-646e-4127-adf7-6451c3d173c5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4053,7 +4080,7 @@
 			(uuid "8572a3c3-8adf-4151-be67-fc6f71349f7e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "281e6712-e37b-4347-81ed-e90d666018a7")
 			(effects
@@ -4692,9 +4719,10 @@
 				)
 			)
 		)
-		(property "Value" "Ground"
+		(property "Value" "~"
 			(at 6 0 90)
-			(layer "F.SilkS")
+			(layer "F.Fab")
+			(hide yes)
 			(uuid "8b9ad4fb-7069-4b37-a7d6-5160640378e3")
 			(effects
 				(font
@@ -4735,6 +4763,18 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Label" "Ground"
+			(at 6 0 90)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "0543d2da-e925-4b0a-bae9-ca2ecb4d33f6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4972,10 +5012,11 @@
 				)
 			)
 		)
-		(property "Value" "Input B"
+		(property "Value" "~"
 			(at 0 6 -90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "ab7b12cd-caef-45e1-887d-1ced33cb7b26")
 			(effects
 				(font
@@ -5017,6 +5058,18 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Label" "Input B"
+			(at 0 6 -90)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "dca5844f-cdbe-45fa-970d-b298709070b1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -5146,7 +5199,7 @@
 			(uuid "a82f3e25-957c-498b-8c0d-641636e800f3")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "5a582016-9d72-4fd7-9d23-c5b1007e4aa1")
 			(effects
@@ -6287,6 +6340,19 @@
 				)
 			)
 		)
+		(property "Characteristics" "100V"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "97d1bd09-1251-414d-9503-971bdfbd4d9a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9cc7f9ef-4a0f-4146-ab6d-519882eba6e1/f37bd468-8422-4aa3-ab70-c3173ed6f4f2")
 		(sheetname "Supply")
@@ -6450,7 +6516,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF / 16V"
+		(property "Value" "10uF"
 			(at 0 1.85 90)
 			(layer "F.Fab")
 			(uuid "98594dd2-fd60-491e-9ef0-0a6b71e22571")
@@ -6494,6 +6560,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Characteristics" "16V"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1e1fe1e5-167e-47aa-95aa-1aa8f7ef345a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -7382,6 +7461,19 @@
 				)
 			)
 		)
+		(property "Characteristics" "100V"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "11569efa-79d0-4f67-bdcd-97117ced3a63")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9cc7f9ef-4a0f-4146-ab6d-519882eba6e1/c51bbcc2-2b3b-4f7c-ba6d-f975c0770334")
 		(sheetname "Supply")
@@ -7545,7 +7637,7 @@
 				)
 			)
 		)
-		(property "Value" "0.1uF / 16V"
+		(property "Value" "0.1uF"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "bb6e064c-d03f-4277-b545-92109cc129b7")
@@ -7589,6 +7681,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Characteristics" "16V"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3894b41a-af23-4b22-bb80-dafa1c2ad38d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8017,7 +8122,7 @@
 		(path "/7e74c729-0179-409c-8f6c-aa96030086fa")
 		(sheetname "Root")
 		(sheetfile "power-monitor.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 2.2 0)
@@ -8501,7 +8606,7 @@
 				)
 			)
 		)
-		(property "Value" "Screw_Terminal_01x01"
+		(property "Value" "~"
 			(at 0 6 0)
 			(layer "F.Fab")
 			(uuid "99dce210-bc60-4598-a327-b2fddcbcdbef")
@@ -8771,7 +8876,7 @@
 		(descr "REDCUBE THR with internal through-hole thread WP-THRSH (https://www.we-online.de/katalog/datasheet/74651175.pdf)")
 		(tags "screw terminal thread redcube thr power connector")
 		(property "Reference" "J4"
-			(at 0 -6 270)
+			(at 0 -6 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "9d929d2a-9a34-4deb-befd-5e9bdc595a74")
@@ -8782,10 +8887,11 @@
 				)
 			)
 		)
-		(property "Value" "Output"
-			(at 0 6 270)
+		(property "Value" "~"
+			(at 0 6 -90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "31961d6e-251b-405a-b841-6567bf40835a")
 			(effects
 				(font
@@ -8827,6 +8933,18 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Label" "Output"
+			(at 0 6 -90)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "731801d3-94fb-4d32-8499-a19c24ab97a1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8956,7 +9074,7 @@
 			(uuid "77f15747-66e4-47d4-8b97-7549cf486cce")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 -90)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "a5a9a34b-086b-4a84-be19-9f0bfc0615c0")
 			(effects
@@ -9274,9 +9392,10 @@
 				)
 			)
 		)
-		(property "Value" "I2C"
+		(property "Value" "~"
 			(at 0 -6 180)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "6dc5cd07-5df9-4bf9-b353-cd24b288b410")
 			(effects
 				(font
@@ -9318,6 +9437,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Label" "I2C"
+			(at 0 -6 0)
+			(layer "F.SilkS")
+			(uuid "2b1d4bb8-847d-416e-8fef-090369479dc7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -10348,7 +10478,7 @@
 		(path "/84a492ad-4cd2-42af-b3cc-ed15639f2aa7")
 		(sheetname "Root")
 		(sheetfile "power-monitor.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 2.2 0)
@@ -10412,9 +10542,10 @@
 				)
 			)
 		)
-		(property "Value" "PROG"
+		(property "Value" "~"
 			(at 0 -2.3 -90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "645afcbd-d4c5-452f-b4d8-ba4bfa579729")
 			(effects
 				(font
@@ -10459,11 +10590,23 @@
 				)
 			)
 		)
+		(property "Label" "PROG"
+			(at 0 -2.3 -90)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "ab414785-8556-45d3-824f-6fcb194e5b44")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/22fe490a-edd0-4c30-93ad-e2e30133357e")
 		(sheetname "Root")
 		(sheetfile "power-monitor.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.27 1.27)
 			(end -1.905 1.27)
