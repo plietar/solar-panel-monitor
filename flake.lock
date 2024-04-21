@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "esp-compilers": {
+    "esp-dev": {
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
@@ -8,19 +8,20 @@
         ]
       },
       "locked": {
-        "dirtyRev": "d8f39bf5dec9d9aba762ab76a2b5e73a0977adc9-dirty",
-        "dirtyShortRev": "d8f39bf-dirty",
-        "lastModified": 1710546054,
-        "narHash": "sha256-F88X1gWAUXZNwnDEr1pINTaKAH/OWEZ8u9r+xrfcI50=",
-        "type": "git",
-        "url": "file:///Users/paul/Projects/nix-esp"
+        "lastModified": 1711158269,
+        "narHash": "sha256-KEbZ88PloMeUd7s+JskJDQz2Z6xXoCbrTQ1no3aaGzs=",
+        "owner": "mirrexagon",
+        "repo": "nixpkgs-esp-dev",
+        "rev": "7972602ad6bff6c87ec84b0467acfc7ea2046501",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///Users/paul/Projects/nix-esp"
+        "owner": "mirrexagon",
+        "repo": "nixpkgs-esp-dev",
+        "type": "github"
       }
     },
-    "esp-dev": {
+    "esp-toolchain": {
       "inputs": {
         "flake-utils": "flake-utils_2",
         "nixpkgs": [
@@ -28,16 +29,17 @@
         ]
       },
       "locked": {
-        "dirtyRev": "b7c536b35c567c3635bd29137064b253f4e42910-dirty",
-        "dirtyShortRev": "b7c536b-dirty",
-        "lastModified": 1703848273,
-        "narHash": "sha256-SfADGc01aO/LhpVStqWlstveb2S2ty7XshMvQuyxzeI=",
-        "type": "git",
-        "url": "file:///Users/paul/Projects/CalanMai/nixpkgs-esp-dev"
+        "lastModified": 1713665232,
+        "narHash": "sha256-8amyKZ+/HFQw8qF656CfxV0ZywxITaASeFZHDSLgVxI=",
+        "owner": "plietar",
+        "repo": "nixpkgs-esp-toolchain",
+        "rev": "8094827e47550f4a3e2cfcfd93f9ecb1ef33ef03",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///Users/paul/Projects/CalanMai/nixpkgs-esp-dev"
+        "owner": "plietar",
+        "repo": "nixpkgs-esp-toolchain",
+        "type": "github"
       }
     },
     "flake-utils": {
@@ -45,11 +47,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1705309234,
-        "narHash": "sha256-uNRRNRKmJyCRC/8y1RqBkqWBLM034y4qN7EprSdmgyA=",
+        "lastModified": 1687709756,
+        "narHash": "sha256-Y5wKlQSkgEK2weWdOu4J3riRd+kV/VCgHsqLNTTWQ/0=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "1ef2e671c3b0c19053962c07dbda38332dcebf26",
+        "rev": "dbabf0ca0c0c4bce6ea5eaf65af5cb694d2082c7",
         "type": "github"
       },
       "original": {
@@ -63,11 +65,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1687709756,
-        "narHash": "sha256-Y5wKlQSkgEK2weWdOu4J3riRd+kV/VCgHsqLNTTWQ/0=",
+        "lastModified": 1705309234,
+        "narHash": "sha256-uNRRNRKmJyCRC/8y1RqBkqWBLM034y4qN7EprSdmgyA=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "dbabf0ca0c0c4bce6ea5eaf65af5cb694d2082c7",
+        "rev": "1ef2e671c3b0c19053962c07dbda38332dcebf26",
         "type": "github"
       },
       "original": {
@@ -111,8 +113,8 @@
     },
     "root": {
       "inputs": {
-        "esp-compilers": "esp-compilers",
         "esp-dev": "esp-dev",
+        "esp-toolchain": "esp-toolchain",
         "flake-utils": "flake-utils_3",
         "nixpkgs": "nixpkgs"
       }
