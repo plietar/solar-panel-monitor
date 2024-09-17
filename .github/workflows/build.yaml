@@ -25,11 +25,17 @@ jobs:
     - uses: DeterminateSystems/magic-nix-cache-action@main
 
     - name: Build interactive bom
-      run: >
+      run: |
+        mkdir -p public/bom
         nix shell .#interactive-html-bom --command \
-          generate_interactive_bom --no-browser --layer-view F hardware/power-monitor.kicad_pcb --dest-dir public --name-format index
+          generate_interactive_bom --no-browser --layer-view F hardware/power-monitor.kicad_pcb --dest-dir public/bom --name-format index
       env:
         INTERACTIVE_HTML_BOM_NO_DISPLAY: 1
+
+    - name: Export PDF Schmetics
+      run: |
+        nix develop .#hardware --command \
+          kicad-cli sch export pdf --output public/power-monitor.pdf hardware/power-monitor.kicad_sch
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3

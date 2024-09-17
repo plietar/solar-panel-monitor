@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "nixpkgs/nixos-24.05";
     flake-utils.url = "github:numtide/flake-utils";
     esp-dev = {
       url = "github:mirrexagon/nixpkgs-esp-dev";
@@ -24,6 +24,13 @@
               toolsToInclude = [ ];
             })
             esp-toolchain.packages."${system}".riscv32-esp-gcc-20230208
+          ];
+        };
+
+        devShells.hardware = pkgs.mkShell {
+          buildInputs = [
+            self.packages."${system}".interactive-html-bom
+            (pkgs.kicad.override { with3d = false; })
           ];
         };
 
