@@ -1,43 +1,42 @@
 {
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.05";
-    flake-utils.url = "github:numtide/flake-utils";
-    esp-dev = {
-      url = "github:mirrexagon/nixpkgs-esp-dev";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    esp-toolchain = {
-      url = "github:plietar/nixpkgs-esp-toolchain";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    esp-dev.url = "github:mirrexagon/nixpkgs-esp-dev";
+    esp-toolchain.url = "github:plietar/nixpkgs-esp-toolchain";
+    kicad-parts.url = "github:plietar/kicad-parts";
+
+    esp-dev.inputs.nixpkgs.follows = "nixpkgs";
+    esp-toolchain.inputs.nixpkgs.follows = "nixpkgs";
+    kicad-parts.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, esp-dev, esp-toolchain, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = import nixpkgs { inherit system; }; in {
-        packages.interactive-html-bom = pkgs.callPackage ./interactive-html-bom.nix { };
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+    perSystem = { pkgs, inputs', ... }: {
+      devShells.default = pkgs.mkShell {
+        buildInputs = [
+          (inputs'.esp-dev.packages.esp-idf-full.override {
+            toolsToInclude = [ ];
+          })
+          inputs'.esp-toolchain.packages.riscv32-esp-gcc-20240530
+        ];
+      };
+      devShells.ci = pkgs.mkShell {
+        buildInputs = [
+          inputs'.esp-dev.packages.esp-idf-esp32c3
+        ];
+      };
+      devShells.hardware = pkgs.mkShell {
+        buildInputs = [
+          inputs'.kicad-parts.packages.interactive-html-bom
+          pkgs.kicad-small
+        ];
+      };
+    };
 
-        devShells.default = pkgs.mkShell {
-          buildInputs = [
-            (esp-dev.packages."${system}".esp-idf-full.override {
-              python3 = pkgs.python310;
-              toolsToInclude = [ ];
-            })
-            esp-toolchain.packages."${system}".riscv32-esp-gcc-20230208
-          ];
-        };
-
-        devShells.hardware = pkgs.mkShell {
-          buildInputs = [
-            self.packages."${system}".interactive-html-bom
-            (pkgs.kicad.override { with3d = false; })
-          ];
-        };
-
-        devShells.ci = pkgs.mkShell {
-          buildInputs = [
-            esp-dev.packages."${system}".esp-idf-esp32c3
-          ];
-        };
-      });
+    systems = [
+      "x86_64-linux"
+      "x86_64-darwin"
+    ];
+  };
 }

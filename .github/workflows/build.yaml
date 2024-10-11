@@ -6,35 +6,30 @@ jobs:
   firmware:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: cachix/install-nix-action@v22
-      with:
-        github_access_token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v4
+    - uses: DeterminateSystems/nix-installer-action@main
     - uses: DeterminateSystems/magic-nix-cache-action@main
     - name: Build firmware
       working-directory: firmware
-      run: nix develop .#ci --command idf.py build
+      run: nix develop -L .#ci --command idf.py build
 
   hardware:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: cachix/install-nix-action@v22
-      with:
-        github_access_token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v4
+    - uses: DeterminateSystems/nix-installer-action@main
     - uses: DeterminateSystems/magic-nix-cache-action@main
 
     - name: Build interactive bom
       run: |
-        mkdir -p public/bom
-        nix shell .#interactive-html-bom --command \
-          generate_interactive_bom --no-browser --layer-view F hardware/power-monitor.kicad_pcb --dest-dir public/bom --name-format index
+        nix develop -L .#hardware --command \
+          generate_interactive_bom --no-browser --layer-view F hardware/power-monitor.kicad_pcb --dest-dir public --name-format index
       env:
         INTERACTIVE_HTML_BOM_NO_DISPLAY: 1
 
     - name: Export PDF Schmetics
       run: |
-        nix develop .#hardware --command \
+        nix develop -L .#hardware --command \
           kicad-cli sch export pdf --output public/power-monitor.pdf hardware/power-monitor.kicad_sch
 
     - name: Upload artifact
@@ -46,8 +41,8 @@ jobs:
     needs: hardware
 
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      pages: write
+      id-token: write
 
     environment:
       name: github-pages
@@ -56,5 +51,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
