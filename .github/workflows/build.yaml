@@ -30,7 +30,7 @@ jobs:
     - name: Export PDF Schmetics
       run: |
         nix develop -L .#hardware --command \
-          kicad-cli sch export pdf --output public/power-monitor.pdf hardware/power-monitor.kicad_sch
+          kicad-cli sch export pdf --output hardware/public/schematic.pdf hardware/power-monitor.kicad_sch
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
